@@ -1,0 +1,25 @@
+class bombaCombustivel:
+    def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel):
+        self.tipoCombustivel = tipoCombustivel
+        self.valorLitro = valorLitro
+        self.quantidadeCombustivel = quantidadeCombustivel
+
+    def abastecerPorValor(self, valor):
+        self.numero_litros = valor / self.valorLitro
+        print(f'Quantidade de combustível: {valor / self.valorLitro:.2f} litros')
+
+
+    def abastecerPorLitro(self, numero_litros):
+        self.numero_litros = numero_litros
+        print(f'Valor a pagar: R${self.numero_litros * self.valorLitro:.2f}')
+
+    def alterarValor(self, valor):
+        self.valorLitro = valor
+        print(f'Valor por litro: {self.valorLitro}')
+
+    def alteraCombustivel(self, combustivel):
+        self.tipoCombustivel = combustivel
+        print(f'Combustível: {combustivel}')
+
+    def alterarQuantidadeCombustivel(self):
+        self.quantidadeCombustivel -= self.numero_litros
